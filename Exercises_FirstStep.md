@@ -19,9 +19,7 @@ Play around with different operations.
  
  main :: IO ()
  main = do
-     args <- getArgs
-     let a = args !! 0
-         b = args !! 1
+     [a, b] <- getArgs
      putStrLn (a ++ " + " ++ b ++ " = " ++ (calc a b))
          where 
             calc sa sb = show $ (read sa :: Int) + (read sb :: Int)
